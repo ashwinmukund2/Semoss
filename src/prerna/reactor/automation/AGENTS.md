@@ -15,6 +15,7 @@ in the authenticated user's Python insight.
 | `GetAutomationRun` | `project`, `runId` | Returns live run state and per-node outputs. |
 | `ListAutomationRuns` | `project`, optional `limit` | Returns run history, newest first. |
 | `CancelAutomationRun` | `project`, `runId` | Requests cancellation using the DB flag and same-pod fast path. |
+| `RollbackAutomation` | `project`, `runId` | Restores the automation's definition and all node Python sources to the immutable snapshot captured at the given run. Returns `saved`, `nodeSources`, `revision`, `globals`, and `scopeVariables`. |
 | `RemoveAutomationStep` | `project`, `nodeId`, optional `removeDownstream` | Removes one step and its attached edges; when `removeDownstream=true`, removes the selected step and every downstream step. Detached drafts can be saved but cannot run. |
 
 ## MCP authoring
