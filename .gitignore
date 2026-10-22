@@ -102,3 +102,6 @@ py/.env
 out/
 .idea/
 semoss.iml
+
+# Claude
+.claude/
